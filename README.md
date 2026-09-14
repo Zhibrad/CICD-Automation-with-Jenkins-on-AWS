@@ -12,6 +12,8 @@
 
 > **A practical CI/CD infrastructure project demonstrating how to provision, configure and validate Jenkins on an AWS EC2 Linux server, prepare Java and Maven build tools, and execute a first automated build job.**
 
+<img width="1536" height="1024" alt="1a7ffc0d-aefb-4ce9-bf3a-33476eb329d8" src="https://github.com/user-attachments/assets/b5046c43-b3b3-4565-816f-f0083984257a" />
+
 ---
 
 # 📌 Project Overview
