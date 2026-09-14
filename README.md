@@ -399,6 +399,8 @@ Jenkins-CICD
 AMI:
 Debian Linux
 ```
+<img width="1516" height="754" alt="Screenshot 2026-09-14 074802" src="https://github.com/user-attachments/assets/42f8e830-d5f5-4b90-8061-e3a3a3e07f88" />
+
 
 You may also use Ubuntu if preferred; Jenkins provides Debian/Ubuntu installation instructions.
 
@@ -441,6 +443,8 @@ Example:
 ```text
 C:\Users\YourName\.ssh\jenkins-key.pem
 ```
+<img width="1369" height="663" alt="Screenshot 2026-09-14 074824" src="https://github.com/user-attachments/assets/d4be5d9d-b9d4-40fc-b60b-6dfefdc3af10" />
+
 
 Never commit this file to GitHub.
 
@@ -488,6 +492,8 @@ The initial learning environment therefore exposes:
 TCP 22
 TCP 8080
 ```
+<img width="901" height="686" alt="Screenshot 2026-09-14 075106" src="https://github.com/user-attachments/assets/ffe35e8e-8855-42cf-91d5-8d50f6dd6ac6" />
+
 
 and both are restricted to your current public IP.
 
@@ -498,6 +504,9 @@ and both are restricted to your current public IP.
 Before installation, consult the official Jenkins Linux installation instructions:
 
 https://www.jenkins.io/doc/book/installing/linux/
+
+<img width="1898" height="990" alt="Screenshot 2026-09-14 075154" src="https://github.com/user-attachments/assets/09206de6-ecfe-4781-a937-43a8c65f577f" />
+
 
 ## Install Java for the Jenkins Controller
 
@@ -554,6 +563,8 @@ Install Jenkins:
 ```bash
 sudo apt install -y jenkins
 ```
+<img width="887" height="377" alt="Screenshot 2026-09-14 075648" src="https://github.com/user-attachments/assets/3614c526-a30e-4955-8e4b-66cd96c7aeca" />
+
 
 These commands follow the current Jenkins Debian/Ubuntu LTS installation method.
 
@@ -586,6 +597,11 @@ Status Checks:
 
 Copy the EC2 public IPv4 address.
 
+<img width="1373" height="791" alt="image" src="https://github.com/user-attachments/assets/4c7bae8f-4b24-4ba3-8f97-3f1bc0e85756" />
+
+
+
+
 Example:
 
 ```text
@@ -607,13 +623,16 @@ The username depends on the selected Debian/Ubuntu image.
 For example:
 
 ```bash
-ssh -i "jenkins-key.pem" admin@98.84.130.158
+ssh -i "jenkins-key.pem" admin@3.84.231.198
 ```
 
 For Ubuntu:
 
+<img width="1075" height="586" alt="image" src="https://github.com/user-attachments/assets/33ec8194-5384-42ab-a2b6-69c582fc40be" />
+
+
 ```bash
-ssh -i "jenkins-key.pem" ubuntu@98.84.130.158
+ssh -i "jenkins-key.pem" ubuntu@3.84.231.198
 ```
 
 ---
@@ -623,7 +642,7 @@ ssh -i "jenkins-key.pem" ubuntu@98.84.130.158
 Check the Jenkins service:
 
 ```bash
-sudo systemctl status jenkins
+sudo systemctl status jenkins or 
 ```
 
 Expected:
@@ -657,8 +676,11 @@ http://<EC2-PUBLIC-IP>:8080
 Example:
 
 ```text
-http://98.84.130.158:8080
+http://3.84.231.198:8080
 ```
+<img width="1876" height="989" alt="image" src="https://github.com/user-attachments/assets/19ad4a01-5e92-48bb-bdbe-0afecf6e11a7" />
+
+
 
 You should see the Jenkins unlock screen.
 
@@ -677,6 +699,8 @@ Copy the generated password.
 Paste it into the Jenkins setup page.
 
 > **Security:** Never publish this password in screenshots, documentation or GitHub.
+> 
+<img width="994" height="813" alt="image" src="https://github.com/user-attachments/assets/3237d2b6-e552-4af8-a48f-80d10cef0acc" />
 
 ---
 
@@ -693,6 +717,7 @@ Choose:
 ```text
 Install suggested plugins
 ```
+<img width="994" height="910" alt="image" src="https://github.com/user-attachments/assets/fa1e8c4b-f7d3-48f6-b8ed-50283c55784e" />
 
 If you want a minimal lab and do not require Ant, you can deselect the Ant-related plugin when the installation interface allows customization.
 
@@ -715,6 +740,8 @@ Use a strong password.
 
 Do not reuse AWS credentials.
 
+<img width="995" height="910" alt="image" src="https://github.com/user-attachments/assets/f0561213-5278-40a2-b58e-65e203e80b8d" />
+
 ---
 
 # 11 — Configure Jenkins URL
@@ -734,6 +761,7 @@ For a temporary lab:
 ```text
 http://<EC2-PUBLIC-IP>:8080/
 ```
+<img width="991" height="904" alt="image" src="https://github.com/user-attachments/assets/47653199-6c18-444b-8278-76f80c92a225" />
 
 For a more stable setup, use:
 
@@ -787,6 +815,7 @@ Select the required Maven version:
 ```text
 3.9.9
 ```
+<img width="1694" height="772" alt="image" src="https://github.com/user-attachments/assets/dfd7aec5-0024-47e4-9ff4-4b3a1461f2ed" />
 
 Save the configuration.
 
@@ -826,12 +855,14 @@ Run:
 ```bash
 java -version
 ```
+<img width="1144" height="128" alt="image" src="https://github.com/user-attachments/assets/c92599eb-b128-49e6-8ee2-218761d836c4" />
 
 Then:
 
 ```bash
 ls /usr/lib/jvm/
 ```
+<img width="796" height="121" alt="image" src="https://github.com/user-attachments/assets/8049acc6-b9ab-45c6-a1a9-c717e5ceb448" />
 
 You may see directories similar to:
 
@@ -852,12 +883,14 @@ If JDK 17 is not already installed:
 sudo apt update
 sudo apt install -y openjdk-17-jdk
 ```
+<img width="1902" height="995" alt="image" src="https://github.com/user-attachments/assets/89312975-e58d-45a8-8c1a-ad25bf43be1a" />
 
 Then verify:
 
 ```bash
 ls /usr/lib/jvm/
 ```
+<img width="661" height="107" alt="image" src="https://github.com/user-attachments/assets/ffb44492-0a15-4a60-8e34-20a2d31ec035" />
 
 and:
 
@@ -898,6 +931,7 @@ For example:
 ```text
 /usr/lib/jvm/java-17-openjdk-amd64
 ```
+<img width="1723" height="514" alt="image" src="https://github.com/user-attachments/assets/e751638a-844a-45c3-a0d4-8e4eb150b0f4" />
 
 > **Important:** Do not assume `/usr/lib/jvm/openjdk-17-jdk-amd64` exists. Always use the exact directory returned by your server.
 
@@ -929,6 +963,7 @@ sudo apt install -y git
 ```
 
 Verify again:
+<img width="1198" height="133" alt="image" src="https://github.com/user-attachments/assets/67786c99-b889-4977-bbde-dc6314b776d6" />
 
 ```bash
 git --version
@@ -945,6 +980,7 @@ Jenkins Dashboard
    ↓
 New Item
 ```
+<img width="865" height="882" alt="image" src="https://github.com/user-attachments/assets/76874759-b882-4b1d-9a41-248de15c7309" />
 
 Enter:
 
@@ -975,6 +1011,7 @@ Example:
 This is my first Jenkins CI/CD validation job running on an AWS EC2 Linux server.
 The job validates the Jenkins execution environment and prints system information.
 ```
+<img width="1570" height="341" alt="image" src="https://github.com/user-attachments/assets/4d9a9585-de2f-4c24-9316-a034e0e00dac" />
 
 ---
 
@@ -991,6 +1028,7 @@ Select:
 ```text
 Execute shell
 ```
+<img width="1103" height="476" alt="image" src="https://github.com/user-attachments/assets/8b29051d-107b-4271-b7c5-e35b82440d81" />
 
 Add:
 
@@ -1002,6 +1040,7 @@ id
 ```
 
 ---
+<img width="1327" height="383" alt="image" src="https://github.com/user-attachments/assets/6ec56291-a468-4b17-80cb-b1bcbd03d906" />
 
 # Why These Commands?
 
@@ -1091,6 +1130,7 @@ Finished: SUCCESS
 The exact output will vary according to your server.
 
 ---
+<img width="1461" height="691" alt="image" src="https://github.com/user-attachments/assets/7ccc6f58-8895-41e8-b9aa-28deb1fe7f0d" />
 
 # 🔄 CI/CD Execution Flow
 
